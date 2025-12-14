@@ -1,0 +1,7 @@
+{
+  "name": "J.A.R.V.I.S. Holographic Interface",
+  "description": "A cyberpunk AR interface featuring a holographic earth controlled by hand gestures and a floating intel panel.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J.A.R.V.I.S. Protocol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Rajdhani"', 'sans-serif'],
+              mono: ['"Share Tech Mono"', 'monospace'],
+            },
+            colors: {
+              'jarvis-cyan': '#00FFFF',
+              'jarvis-dark': '#001a1a',
+              'jarvis-alert': '#FF3333',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scanline': 'scanline 8s linear infinite',
+            },
+            keyframes: {
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      /* Custom Scrollbar for HUD elements */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 255, 255, 0.1);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00FFFF;
+      }
+      .hud-text-shadow {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.5);
+      }
+      .bg-grid-pattern {
+        background-image: linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.4.2",
+    "three": "https://esm.sh/three@^0.182.0",
+    "@mediapipe/tasks-vision": "https://esm.sh/@mediapipe/tasks-vision@^0.10.22-rc.20250304",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
